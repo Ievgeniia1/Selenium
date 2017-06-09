@@ -26,7 +26,7 @@ public class GoogleSearchTest {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","E:\\Kit\\Selenium\\src\\main\\resources\\chromedriver.exe");
         webDriver = new ChromeDriver();
-        googleSearch="https://www.google.com.ua/";
+        googleSearch="https://www.googe.com.ua/";
         webDriver.get(googleSearch);
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);//WebDriver будет ждать 5 секунд, пока подгрузится єлемент
