@@ -1,9 +1,9 @@
 package com.kit.core.google;
 
 import com.kit.core.WebDriverTestBase;
-import com.kit.core.pages.gmailPages.MailsListPage;
-import com.kit.core.pages.gmailPages.PasswordPage;
-import com.kit.core.pages.gmailPages.UserNamePage;
+import com.kit.pages.gmailPages.MailsListPage;
+import com.kit.pages.gmailPages.PasswordPage;
+import com.kit.pages.gmailPages.UserNamePage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;

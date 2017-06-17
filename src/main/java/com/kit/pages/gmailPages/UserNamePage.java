@@ -1,6 +1,5 @@
-package com.kit.core.pages.gmailPages;
+package com.kit.pages.gmailPages;
 
-import com.kit.core.WebDriverTestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
