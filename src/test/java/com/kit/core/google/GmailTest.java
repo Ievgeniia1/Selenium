@@ -18,7 +18,7 @@ public class GmailTest extends WebDriverTestBase{
     private String searchText="Gmail";
 
 
-    @Test
+    @Test (enabled =  true)
     public void gmailLoginTest(){
         UserNamePage userNamePage = new UserNamePage(webDriver);
         userNamePage.open(accountPage);

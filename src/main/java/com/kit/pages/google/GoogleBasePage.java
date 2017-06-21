@@ -13,7 +13,7 @@ public class GoogleBasePage {
 
     public GoogleBasePage(WebDriver webDriver) {
         this.webDriver=webDriver;
-        webDriverUtil = new WebDriverUtil(webDriver);
+        webDriverUtil = new WebDriverUtil(webDriver); //added this.
     }
 
     public void open(String url){

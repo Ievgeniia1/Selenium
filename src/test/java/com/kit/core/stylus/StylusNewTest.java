@@ -20,7 +20,7 @@ public class StylusNewTest extends WebDriverTestBase {
     String code = "Код товара";
 
 
-    @Test
+    @Test (enabled = true)
     public void test(){
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open(url);
@@ -34,7 +34,7 @@ public class StylusNewTest extends WebDriverTestBase {
 
         ItemCard itemCard = new ItemCard(webDriver);
 
-        assertTrue(itemCard.getText().contains(code));
+        assertTrue(itemCard.getText().contains("1"));
 
 
     }

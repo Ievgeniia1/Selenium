@@ -2,10 +2,14 @@ package com.kit.core.google;
 
 import com.kit.core.WebDriverTestBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import java.util.List;
+
+import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -15,7 +19,8 @@ public class GoogleSearchOldTest extends WebDriverTestBase{
     private String googleSearch = "https://www.google.com.ua/";
 
 
-    @Test (enabled = false)
+
+    @Test (enabled = true)
     public void searchTest(){
         webDriver.get(googleSearch);
         String searchText = "Selenium";
@@ -30,6 +35,21 @@ public class GoogleSearchOldTest extends WebDriverTestBase{
         WebElement link = webDriver.findElement(linkLocator);
 
         assertTrue(link.getText().contains(searchText));
+
+        List<WebElement> webElementList = webDriver.findElements(By.cssSelector(".r>a"));
+        if (!webElementList.isEmpty()) {
+            for (WebElement webElement:webElementList) {
+                assertTrue(webElement.getText().toLowerCase().contains(searchText.toLowerCase()));
+
+            }
+        }
+            else {
+            assertFalse("Elements not found",true);
+
+        }
+
+
+
 
 
     }
