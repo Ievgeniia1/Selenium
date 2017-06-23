@@ -16,6 +16,10 @@ public class GoogleBasePage {
         webDriverUtil = new WebDriverUtil(webDriver); //added this.
     }
 
+//    public void takeScreenShot(String attachName){
+//        webDriverUtil.saveScreenshot(attachName);
+//        }
+
     public void open(String url){
         webDriver.get(url);
     }
