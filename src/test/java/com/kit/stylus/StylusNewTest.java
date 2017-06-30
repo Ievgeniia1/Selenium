@@ -1,4 +1,4 @@
-package com.kit.core.stylus;
+package com.kit.stylus;
 
 import com.kit.core.WebDriverTestBase;
 import com.kit.pages.stylus.ItemCard;

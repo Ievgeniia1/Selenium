@@ -1,0 +1,31 @@
+package com.kit.util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+/**
+ * Created by evgeniya on 23.06.2017.
+ */
+public class PropertiesCache {
+    private final Properties configProp = new Properties();
+    private static final PropertiesCache INSTANCE = new PropertiesCache();
+
+    public PropertiesCache() {
+
+        //Private constructor to restrict new instances
+        System.out.println("Read all properties from file");
+        InputStream in =this.getClass().getClassLoader().getResourceAsStream("test.properties");//classLoader загружает ресурсы
+
+        try {
+            configProp.load(in);
+        }
+        catch (IOException e){
+            System.out.println("Can't read allproperties from file. Exception: "+e);
+        }
+    }
+
+    public static String getProperty(String key){
+        return INSTANCE.configProp.getProperty(key);
+    }
+}

@@ -1,10 +1,6 @@
 package com.kit.util;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.allure.annotations.Attachment;
@@ -19,14 +15,32 @@ import static com.google.common.io.Files.toByteArray;
 public class WebDriverUtil {
     private WebDriver webDriver;
     private WebDriverWait webDriverWait;
+    private JavascriptExecutor executor;
+    long explicitWait = Long.parseLong(PropertiesCache.getProperty("time.outline.seconds"));
 
     public WebDriverUtil(WebDriver webDriver) {
         this.webDriver = webDriver;
-        webDriverWait = new WebDriverWait(webDriver, 15);
+        webDriverWait = new WebDriverWait(webDriver, explicitWait);
     }
 
     public WebElement waitForExpectedCondition(ExpectedCondition expectedCondition) {
         return  (WebElement)webDriverWait.until(expectedCondition);
+    }
+
+    public void jsClick(String locator, String type){
+        executor = (JavascriptExecutor) webDriver;
+        switch(type){
+            case "id":
+                executor.executeScript("document.getElementById(\"" + locator + "\").click()");
+                break;
+            case "name":
+                executor.executeScript("document.getElementsByName(\"" + locator + "\")[0].click()"); //возвращает массив,
+                // нужно взять первый элемент [0]
+                break;
+
+        }
+
+
     }
 
     @Attachment(value = "{0}")

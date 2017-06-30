@@ -1,9 +1,9 @@
-package com.kit.core.google;
+package com.kit.google;
 
+import com.kit.core.TestListener;
 import com.kit.core.WebDriverTestBase;
 import com.kit.pages.google.GoogleSearchPage;
 import com.kit.pages.google.GoogleSearchResultPage;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
@@ -18,7 +18,7 @@ import static org.testng.Assert.assertTrue;
  */
 @Features("Google search")
 @Stories({"WEB-777"})
-@Listeners({com.kit.core.TestListener.class})
+@Listeners({TestListener.class})
 public class GoogleSearchTest extends WebDriverTestBase {
     private String googleSearch = "https://www.google.com.ua/"; //тестовые данные в начале
     private String searchText = "Selenium";
@@ -35,6 +35,7 @@ public class GoogleSearchTest extends WebDriverTestBase {
         GoogleSearchResultPage googleSearchResultPage = new GoogleSearchResultPage(webDriver);//Перешли на новую страницу
         //googleSearchResultPage.takeScreenShot(searchText);
         assertTrue(googleSearchResultPage.getLinkText().contains(searchText));
+        googleSearchResultPage.clickLink();
 
     }
 

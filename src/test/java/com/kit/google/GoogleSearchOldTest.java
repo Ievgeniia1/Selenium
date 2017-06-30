@@ -1,10 +1,8 @@
-package com.kit.core.google;
+package com.kit.google;
 
 import com.kit.core.WebDriverTestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Stories;
@@ -20,7 +18,7 @@ import static org.testng.Assert.assertTrue;
 
 @Features("Google search")
 @Stories({"WEB-778"})
-public class GoogleSearchOldTest extends WebDriverTestBase{
+public class GoogleSearchOldTest extends WebDriverTestBase {
     private String googleSearch = "https://www.google.com.ua/";
 
 

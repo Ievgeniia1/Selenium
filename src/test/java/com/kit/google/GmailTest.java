@@ -1,4 +1,4 @@
-package com.kit.core.google;
+package com.kit.google;
 
 import com.kit.core.WebDriverTestBase;
 import com.kit.pages.gmailPages.MailsListPage;
@@ -11,7 +11,7 @@ import static org.testng.Assert.assertTrue;
 /**
  * Created by evgeniya on 09.06.2017.
  */
-public class GmailTest extends WebDriverTestBase{
+public class GmailTest extends WebDriverTestBase {
     private String accountPage = "https://gmail.com/"; //тестовые данные в начале
     private String userName = "testselenium373";
     private String password = "2wsxzaq1";

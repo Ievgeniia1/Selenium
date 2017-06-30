@@ -18,7 +18,7 @@ public class GoogleSearchPage extends GoogleBasePage{
 
 
 
-    By searchLocator = By.name("q1");
+    By searchLocator = By.name("q");
     //@FindBy(name ="q")    //ставится только над єлементом, кот. будем иницицализировать
     private WebElement searchField; //для нужных элементов заводим WebElement и локаторы
 

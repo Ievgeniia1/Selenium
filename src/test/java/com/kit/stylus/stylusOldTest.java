@@ -1,12 +1,8 @@
-package com.kit.core.stylus;
+package com.kit.stylus;
 
 import com.kit.core.WebDriverTestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -14,7 +10,7 @@ import static org.testng.Assert.assertTrue;
 /**
  * Created by evgeniya on 19.06.2017.
  */
-public class stylusOldTest extends WebDriverTestBase{
+public class stylusOldTest extends WebDriverTestBase {
 
 
     @Test (enabled = true)
