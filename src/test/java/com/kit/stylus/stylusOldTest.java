@@ -13,7 +13,7 @@ import static org.testng.Assert.assertTrue;
 public class stylusOldTest extends WebDriverTestBase {
 
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void test(){
 
         String searchText ="Sony";

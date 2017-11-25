@@ -30,6 +30,7 @@ public class GoogleSearchOldTest extends WebDriverTestBase {
 
         By searchLocator = By.name("q");
         WebElement searchField = webDriver.findElement(searchLocator);
+        //List<WebElement> webElementList = webDriver.findElements(searchLocator);
         searchField.sendKeys(searchText);;
         searchField.submit();
 

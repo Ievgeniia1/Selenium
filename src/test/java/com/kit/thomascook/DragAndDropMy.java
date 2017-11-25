@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
  * Created by evgeniya on 30.06.2017.
  */
 public class DragAndDropMy extends WebDriverTestBase {
-    @Test
+    @Test (enabled = false)
     public void testDragDropMy() throws InterruptedException {
         webDriver.get("https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_draganddrop");
         webDriver.switchTo().frame("iframeResult");

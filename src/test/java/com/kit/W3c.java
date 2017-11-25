@@ -17,7 +17,7 @@ public class W3c extends WebDriverTestBase {
     String matchingText= "Opel";
 
 
-    @Test
+    @Test (enabled = false)
     public void iFrameTest(){
         webDriver.get(url);
         webDriver.switchTo().frame("iframeResult");

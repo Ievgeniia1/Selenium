@@ -20,7 +20,7 @@ public class StylusNewTest extends WebDriverTestBase {
     String code = "Код товара";
 
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void test(){
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open(url);

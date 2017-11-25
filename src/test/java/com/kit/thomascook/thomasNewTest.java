@@ -14,7 +14,7 @@ public class thomasNewTest extends WebDriverTestBase {
     String value="string:1";
     String text = "1 Night";
 
-    @Test
+    @Test (enabled = false)
     public void testThomas(){
         ThomasHomePage thomasHomePage = new ThomasHomePage(webDriver);
         thomasHomePage.open(url);

@@ -13,7 +13,7 @@ import static org.testng.Assert.assertTrue;
  */
 public class thomasCookTest extends WebDriverTestBase {
 
-    @Test
+    @Test (enabled = false)
     public void thomasCookTest() {
 
         webDriver.get("https://www.thomascook.com/");

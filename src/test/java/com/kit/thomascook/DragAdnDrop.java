@@ -13,7 +13,7 @@ import static org.testng.Assert.assertTrue;
  * Created by evgeniya on 30.06.2017.
  */
 public class DragAdnDrop extends WebDriverTestBase {
-    @Test
+    @Test (enabled = false)
     public void testDragDrop() throws InterruptedException {
         webDriver.get("https://gojs.net/latest/samples/htmlDragDrop.html?gclid=CLjWnLeG5tQCFUeVGwodCowEcA");
         WebElement From = webDriver.findElement(By.xpath(".//*[@id='sample']/div[1]/span[1]/div/div[1]"));
